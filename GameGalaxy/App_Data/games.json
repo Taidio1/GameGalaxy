@@ -1,0 +1,26 @@
+{
+  {
+    "Id": 1,
+    "Title": "The Witcher 3",
+    "Rating": "9.5",
+    "Producer": "CD Projekt Red",
+    "Price": 89.99,
+    "ReleaseDate": 2015
+  },
+  {
+    "Id": 2,
+    "Title": "Cyberpunk 2077",
+    "Rating": "9.1",
+    "Producer": "CD Projekt Red",
+    "Price": 199.99,
+    "ReleaseDate": 2020
+  },
+  {
+    "Id": 3,
+    "Title": "Minecraft",
+    "Rating": "10.0",
+    "Producer": "Mojang",
+    "Price": 99.00,
+    "ReleaseDate": 2011
+  }
+}
