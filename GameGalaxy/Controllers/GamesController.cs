@@ -9,10 +9,9 @@ public class GamesController : Controller
 {
     private readonly JsonFileContext _context;
 
-    public GamesController(IConfiguration configuration)
+    public GamesController(JsonFileContext context)
     {
-        var filePath = configuration["JsonFilePath"];
-        _context = new JsonFileContext(Path.Combine(Directory.GetCurrentDirectory(), filePath));
+        _context = context;
     }
 
     public IActionResult Index()
@@ -30,7 +29,8 @@ public class GamesController : Controller
         }
         return View(game);
     }
-
+    
+    // GET: Games/Create
     public IActionResult Create()
     {
         return View();
@@ -53,17 +53,6 @@ public class GamesController : Controller
         if (game == null)
         {
             return NotFound();
-        }
-        return View(game);
-    }
-
-    [HttpPost]
-    public IActionResult Edit(Game game)
-    {
-        if (ModelState.IsValid)
-        {
-            _context.UpdateGame(game);
-            return RedirectToAction(nameof(Index));
         }
         return View(game);
     }

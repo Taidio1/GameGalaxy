@@ -1,21 +1,25 @@
-using GameGalaxy.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using GameGalaxy.Models;
+using GameGalaxy.Controllers;
 
-namespace GameGalaxy.Controllers
+namespace WebApplication2.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly JsonFileContext _context;
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var games = _context.GetGames();
+            return View(games);
         }
 
         public IActionResult Privacy()

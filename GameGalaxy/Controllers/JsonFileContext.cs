@@ -15,6 +15,22 @@ namespace GameGalaxy.Controllers
             _filePath = filePath;
         }
 
+        public void SeedData()
+        {
+            var games = new List<Game>
+        {
+            new Game { Id = 1, Name = "Game 1", Genre = "Genre 1", ReleaseDate = DateTime.Now },
+            new Game { Id = 2, Name = "Game 2", Genre = "Genre 2", ReleaseDate = DateTime.Now.AddYears(-1) },
+            // Dodaj więcej przykładowych gier...
+        };
+
+            // Zakładamy, że masz metodę do dodawania gier
+            foreach (var game in games)
+            {
+                AddGame(game);
+            }
+        }
+
         public List<Game> GetGames()
         {
             if (!File.Exists(_filePath))
@@ -42,18 +58,6 @@ namespace GameGalaxy.Controllers
             var games = GetGames();
             games.Add(game);
             SaveGames(games);
-        }
-
-        public void UpdateGame(Game updatedGame)
-        {
-            var games = GetGames();
-            var existingGame = games.FirstOrDefault(g => g.Id == updatedGame.Id);
-            if (existingGame != null)
-            {
-                existingGame.Title = updatedGame.Title;
-                existingGame.Price = updatedGame.Price;
-                SaveGames(games);
-            }
         }
 
         public void DeleteGame(int id)
