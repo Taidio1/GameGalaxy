@@ -1,36 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
-using GameGalaxy.Models;
-using GameGalaxy.Controllers;
 
-namespace WebApplication2.Controllers
+namespace GameGalaxy.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly JsonFileContext _context;
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-            _context = context;
-        }
-
         public IActionResult Index()
         {
-            var games = _context.GetGames();
-            return View(games);
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return RedirectToAction("Index", "Games");
         }
     }
 }
