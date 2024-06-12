@@ -15,14 +15,28 @@ namespace GameGalaxy.Controllers
         }
 
         public IActionResult Index()
+    {
+        return View();
+    }
+     public IActionResult Details(int id)
         {
-            var games = _context.GetGames();
-            if (games == null)
+            var game = _context.GetGameById(id);
+            if (game == null)
             {
-                return Problem("Nie udało się załadować danych o grach.");
+                return NotFound();
             }
-            return View(games);
+            return View(game);
         }
+    public IActionResult GameList()
+    {
+        var games = _context.GetGames();
+        if (games == null)
+        {
+            return Problem("Nie udało się załadować danych o grach.");
+        }
+        return View(games);
+    }
+
 
 
         public IActionResult Create()

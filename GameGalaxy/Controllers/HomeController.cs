@@ -6,7 +6,13 @@ namespace GameGalaxy.Controllers
     {
         public IActionResult Index()
         {
-            return RedirectToAction("Index", "Games");
+            return View();
+        }
+       
+
+        public IActionResult Privacy()
+        {
+            return View();
         }
     }
 }

@@ -1,21 +1,13 @@
-﻿@model IEnumerable<GameGalaxy.Models.Game>
+@model IEnumerable<GameGalaxy.Models.Game>
 @{
-    ViewData["Title"] = "Games Index";
+    ViewData["Title"] = "Games List";
 }
 
 <h1>Games</h1>
 
 <p>
-    <a asp-action="Create">Create New Game</a>
+    <a asp-action="Create" class="btn btn-primary">Add New Game</a>
 </p>
-
-<form asp-action="Index">
-    <p>
-        Search: <input type="text" name="searchString" />
-        <input type="submit" value="Search" />
-    </p>
-</form>
-
 <table class="table">
     <thead>
     <tr>
@@ -32,16 +24,13 @@
             @Html.DisplayNameFor(model => model.First().Producer)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.First().Price)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.First().ReleaseDate)
         </th>
         <th></th>
     </tr>
     </thead>
     <tbody>
-    @foreach (var item in Model)
+       @foreach (var item in Model)
     {
         <tr>
             <td>
@@ -57,14 +46,12 @@
                 @Html.DisplayFor(modelItem => item.Producer)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.ReleaseDate)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a> |
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>
             </td>
         </tr>
     }

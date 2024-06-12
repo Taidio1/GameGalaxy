@@ -1,7 +1,7 @@
 [
   {
     "Id": 1,
-    "Name": null,
+    "Name": "Witcher 3",
     "Rating": 9.5,
     "Producer": "CD Projekt Red",
     "Price": 89.99,
@@ -9,7 +9,7 @@
   },
   {
     "Id": 2,
-    "Name": null,
+    "Name": "CyberPunk2077",
     "Rating": 9.1,
     "Producer": "CD Projekt blue",
     "Price": 199.99,
@@ -17,7 +17,7 @@
   },
   {
     "Id": 3,
-    "Name": null,
+    "Name": "Minecraft",
     "Rating": 10.0,
     "Producer": "Mojang",
     "Price": 99.00,
@@ -25,42 +25,10 @@
   },
   {
     "Id": 4,
-    "Name": null,
-    "Rating": 9.1,
-    "Producer": "CD Projekt Red",
-    "Price": 199.0,
-    "ReleaseDate": 2020
-  },
-  {
-    "Id": 5,
-    "Name": "asda",
-    "Rating": 11.0,
-    "Producer": "asd",
-    "Price": 11.00,
-    "ReleaseDate": 1111
-  },
-  {
-    "Id": 6,
-    "Name": "as",
-    "Rating": 2.0,
-    "Producer": "as",
-    "Price": 1.00,
-    "ReleaseDate": 13
-  },
-  {
-    "Id": 7,
-    "Name": "sd",
-    "Rating": 1.0,
-    "Producer": "ds",
-    "Price": 2.00,
-    "ReleaseDate": 2
-  },
-  {
-    "Id": 8,
-    "Name": "d",
-    "Rating": 1.0,
-    "Producer": "d",
-    "Price": 1.00,
-    "ReleaseDate": 2
+    "Name": "Fortnite",
+    "Rating": 6.0,
+    "Producer": "EpicGames",
+    "Price": 0.0,
+    "ReleaseDate": 2017
   }
 ]
