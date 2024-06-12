@@ -8,52 +8,27 @@
 <p>
     <a asp-action="Create" class="btn btn-primary">Add New Game</a>
 </p>
-<table class="table">
-    <thead>
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.First().Id)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().Rating)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().Producer)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().ReleaseDate)
-        </th>
-        <th></th>
-    </tr>
-    </thead>
-    <tbody>
-       @foreach (var item in Model)
+<div class="row">
+    @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rating)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Producer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReleaseDate)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a> |
-                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>
-            </td>
-        </tr>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm game-card">
+                <img src="@item.ImageUrl" class="card-img-top" alt="@item.Name" />
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <h5 class="card-title text-center">@item.Name</h5>
+                    <p class="card-text text-center">
+                        <strong>Rating:</strong> @item.Rating/10<br />
+                        <strong>Producer:</strong> @item.Producer<br />
+                        <strong>Release Date:</strong> @item.ReleaseDate<br />
+                        
+                    </p>
+                    <div class="btn-group d-flex" role="group">
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     }
-    </tbody>
-</table>
+</div>

@@ -1,5 +1,6 @@
 [
   {
+    "ImageUrl": "https://assets-prd.ignimgs.com/2021/12/08/witcher3-1638987659679.jpg?width=300&crop=1%3A1%2Csmart&auto=webp",
     "Id": 1,
     "Name": "Witcher 3",
     "Rating": 9.5,
@@ -8,27 +9,21 @@
     "ReleaseDate": 2015
   },
   {
+    "ImageUrl": "https://assets-prd.ignimgs.com/2020/07/16/cyberpunk-2077-button-fin-1594877291453.jpg?width=300&crop=1%3A1%2Csmart&auto=webp",
     "Id": 2,
     "Name": "CyberPunk2077",
     "Rating": 9.1,
-    "Producer": "CD Projekt blue",
+    "Producer": "CD Projekt Red",
     "Price": 199.99,
     "ReleaseDate": 2020
   },
   {
+    "ImageUrl": "https://assets-prd.ignimgs.com/2022/06/01/minecraftpocket-1654097809188.jpg?width=300&crop=1%3A1%2Csmart&auto=webp",
     "Id": 3,
     "Name": "Minecraft",
     "Rating": 10.0,
     "Producer": "Mojang",
     "Price": 99.00,
     "ReleaseDate": 2011
-  },
-  {
-    "Id": 4,
-    "Name": "Fortnite",
-    "Rating": 6.0,
-    "Producer": "EpicGames",
-    "Price": 0.0,
-    "ReleaseDate": 2017
   }
 ]

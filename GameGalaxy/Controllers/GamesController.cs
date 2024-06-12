@@ -15,9 +15,9 @@ namespace GameGalaxy.Controllers
         }
 
         public IActionResult Index()
-    {
+        {
         return View();
-    }
+        }
      public IActionResult Details(int id)
         {
             var game = _context.GetGameById(id);
@@ -28,14 +28,14 @@ namespace GameGalaxy.Controllers
             return View(game);
         }
     public IActionResult GameList()
-    {
+        {
         var games = _context.GetGames();
         if (games == null)
         {
             return Problem("Nie udało się załadować danych o grach.");
         }
         return View(games);
-    }
+        }
 
 
 
@@ -46,7 +46,7 @@ namespace GameGalaxy.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create([Bind("Name,Producer,Price,Rating,ReleaseDate")] Game game)
+        public IActionResult Create([Bind("Name,Producer,Price,Rating,ReleaseDate,ImageUrl")] Game game)
         {
             if (ModelState.IsValid)
             {
@@ -76,7 +76,7 @@ namespace GameGalaxy.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, [Bind("Id,Name,Producer,Price,Rating,ReleaseDate")] Game game)
+        public IActionResult Edit(int id, [Bind("Id,Name,Producer,Price,Rating,ReleaseDate,ImageUrl")] Game game)
         {
             if (id != game.Id)
             {
@@ -98,36 +98,35 @@ namespace GameGalaxy.Controllers
             }
             return View(game);
         }
-
         public IActionResult Delete(int? id)
-        {
-            if (id == null)
             {
-                return NotFound();
-            }
+                if (id == null)
+                {
+                     return NotFound();
+                }
 
-            var game = _context.GetGameById(id.Value);
-            if (game == null)
-            {
-                return NotFound();
-            }
+        var game = _context.GetGameById(id.Value);
+                if (game == null)
+                {
+                    return NotFound();
+                }
             return View(game);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
-        {
-            var games = _context.GetGames();
-            var game = games.FirstOrDefault(g => g.Id == id);
-            if (game == null)
-            {
-                return NotFound();
             }
 
-            games.Remove(game);
-            _context.SaveGames(games);
-            return RedirectToAction(nameof(Index));
-        }
+        [HttpPost]
+[ValidateAntiForgeryToken]
+public IActionResult DeleteConfirmed(int id)
+{
+    var games = _context.GetGames();
+    var game = games.FirstOrDefault(g => g.Id == id);
+    if (game == null)
+    {
+        return NotFound();
+    }
+
+    games.Remove(game);
+    _context.SaveGames(games);
+    return RedirectToAction(nameof(GameList));
+}
     }
 }

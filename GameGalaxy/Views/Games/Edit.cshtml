@@ -17,6 +17,11 @@
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="ImageUrl" class="control-label"></label>
+                <input asp-for="ImageUrl" class="form-control" />
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Producer" class="control-label"></label>
                 <input asp-for="Producer" class="form-control" />
                 <span asp-validation-for="Producer" class="text-danger"></span>
@@ -38,7 +43,6 @@
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
-                
             </div>
         </form>
     </div>
