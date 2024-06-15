@@ -17,8 +17,8 @@ przy użyciu języka C# i frameworka .NET oraz pokazanie implementacji podstawow
 GameGalaxy to aplikacja webowa, która pozwala użytkownikom zarządzać i przeglądać listę gier. Projekt stosuje wzorzec projektowy MVC, zapewniając wyraźne rozdzielenie warstw logiki i łatwość utrzymania. Użytkownicy mogą dodawać, przeglądać, aktualizować i usuwać wpisy gier, a także przeglądać listę dostępnych gier.
 
 ## Technologie:
-* C# i .NET Framework: Logika backendu oraz architektura MVC zostały zaimplementowane przy użyciu języka C# i frameworka .NET.
-* Bootstrap: Framework CSS użyty do stworzenia responsywnego i estetycznego interfejsu użytkownika.
+* **C# i .NET Framework:** Logika backendu oraz architektura MVC zostały zaimplementowane przy użyciu języka C# i frameworka .NET.
+* **Bootstrap:** Framework CSS użyty do stworzenia responsywnego i estetycznego interfejsu użytkownika.
 
 ## Kroki realizacji projektu:
 1. **Planowanie:** Określenie wymagań projektu oraz podział zadań w zespole.
