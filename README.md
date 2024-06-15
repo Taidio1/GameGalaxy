@@ -4,8 +4,11 @@
 # GameGalaxy
 
 Projekt został opracowany przez: <br>
+
 Kacper Łacniak - 48943 <br>
+
 Igor Dudkowski - 49037 <br>
+
 Jonasz Majcherczyk - 48696 <br>
 
 Docelowymi użytkownikami GameGalaxy są osoby zainteresowane zarządzaniem i przeglądaniem listy gier.
