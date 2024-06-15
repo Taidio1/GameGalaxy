@@ -1,7 +1,7 @@
 # GameGalaxy
 
 Projekt został opracowany przez: 
-Kacper Łacniak - 48943
+Kacper Łacniak - 48943 <br>
 Igor Dedkowski - 49037
 Jonasz Majcherczyk - 
 
